@@ -1,5 +1,9 @@
+@import './variables.css';
+@import './header.css';
+@import './hero.css';
+
 .body {
-  background-image: url('https://i.postimg.cc/9MMyD4Vw/Fondo.jpg');
+  background-image: url('https://i.postimg.cc/65SBt6NY/Fondo1.jpg');
   background-position: center;
   background-size: cover;
   color: white;
