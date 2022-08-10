@@ -38,7 +38,7 @@ function Menuejercicio(noejercicio){
     break;
 
     case 5:
-      let radio = parseFloat(prompt ("Ingrese el radio del circulo"));
+      let radio = parseFloat(prompt ("Ingrese el radio de la circunferencia"));
       alert (areacirculo(radio));
     break;
 
@@ -89,6 +89,19 @@ function Menuejercicio(noejercicio){
       let cantalumnos = parseFloat(prompt ("Ingrese la cantidad de alumnos"));
       alert (aprobados(cantalumnos));
     break;
+
+    case 14:
+      let cantalumnos1 = parseFloat(prompt ("Ingrese la cantidad de alumnos"));
+      alert (aprobados(cantalumnos1));
+    break;
+
+    case 15:
+      let votacion = parseFloat(prompt ("Ingrese su edad"));
+      alert (votar(votacion));
+    break;
+
+
+
   }
 }
 
@@ -100,7 +113,7 @@ function ej1_sumarvalores(a,b){
     return " Por favor ingrese valores ";
   }
   else {
-    return a + b;
+     return `La Suma de ${a} y ${b} es ${a+b}`;
   }
 }
 
@@ -110,7 +123,7 @@ function calcularprom(a,b,c,d){
     return " Por favor ingrese valores ";
   }
   else {
-    return (a+b+c+d)/4;
+      return `El promedio de las notas de ${a}, ${b}, ${c}, ${d} es ${(a+b+c+d)/4}`;
   }
 }
 
@@ -120,7 +133,7 @@ function arearectangulo(a,b){
     return " Por favor ingrese valores ";
   }
   else {
-    return a*b;
+    return `El área del rectangulo es ${a*b}`;
   }
 }
 
@@ -131,7 +144,8 @@ function areatriangulo(a,b){
     return " Por favor ingrese valores ";
   }
   else {
-    return (a*b)/2;
+    return `El área del triángulo es ${(a*b)/2}`;
+
   }
 }
 
@@ -141,7 +155,7 @@ function areacirculo(a){
     return " Por favor ingrese valores ";
   }
   else {
-    return 3.1416*(a**2);
+    return `El área de la cirncunferencia es ${(a**2)*3.1416}`;
   }
 }
 
@@ -151,7 +165,7 @@ function sueldo(a,b){
     return " Por favor ingrese valores ";
   }
   else {
-    return a*b;
+    return `El sueldo semanal del trabajador es ${a*b}`;
   }
 }
 
@@ -161,7 +175,7 @@ function pulgadas(a){
     return " Por favor ingrese valores ";
   }
   else {
-    return a/0.0254;
+    return `La medida de las telas en pulgadas es  ${a/0.0254}`;
   }
 }
 
@@ -171,7 +185,7 @@ function cambio(a,b){
     return " Por favor ingrese valores ";
   }
   else {
-    return a/b;
+    return `Cuenta con ${a/b} dólares`;
   }
 }
 
@@ -236,3 +250,22 @@ function menor(a,b,c,d,e,f){
       }
 
     
+      function votar(b){
+        if(isNaN(b))
+        {
+          return " Por favor ingrese valores ";
+        }
+        else {
+          if (b<18){
+            return " Usted no puede votar ";
+          }
+          else {
+            if (b>60){
+              return " Su participación en las votaciones no es obligatoria ";
+            }
+            else {
+              return " Usted esta obligado a votar en las próximas elecciones";
+            }
+          }
+         }
+      }
