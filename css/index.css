@@ -1,10 +1,14 @@
 .body {
-  background-image: url('https://i.postimg.cc/7PJV8Dp8/react-01-01-wpo.webp');
+  background-image: url('https://i.postimg.cc/9MMyD4Vw/Fondo.jpg');
   background-position: center;
   background-size: cover;
   color: white;
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   margin: 0;
+}
+button {
+  background-color: #61dafb;
+  font-size: xx-large;
 }
 
 .profile {
@@ -80,7 +84,7 @@
 
 .card__body-presentation::before,
 .card__body-presentation::after {
-  content: '❤';
+  content: '*';
 }
 
 .card__footer-nav-list {
