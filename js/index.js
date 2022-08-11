@@ -86,8 +86,15 @@ function Menuejercicio(noejercicio){
     break;
 
     case 13:
-      let cantalumnos = parseFloat(prompt ("Ingrese la cantidad de alumnos"));
-      alert (aprobados(cantalumnos));
+      // let contaralumnos = parseFloat(prompt ("Ingrese la cantidad de alumnos"));
+      // const notas = [];
+      //       for (i==0;i<contaralumnos;i++){
+      //       notas[i] = parseFloat(prompt `La Nota del alumno ${i} `);
+      // }
+      // // alert (aprobados(notas[]));
+      //   alert (notas[3]);
+      let nro_estudiantes = parseInt(prompt("Ingrese el número de estudiantes : "));
+      alert(ej13_CalcularAprobados(nro_estudiantes));
     break;
 
     case 14:
@@ -268,4 +275,35 @@ function menor(a,b,c,d,e,f){
             }
           }
          }
+      }
+
+
+      function ej13_CalcularAprobados(nro_estudiantes) {
+        let estudiante = [];
+        let nota_aprobatoria = 11;
+        let aprobados = 0;
+        let desaprobados = 0;
+        if (isNaN(nro_estudiantes)) {
+          return "Por favor ingrese valores numericos";
+        } else {
+          for (let index = 0; index < nro_estudiantes; index++) {
+            let nombre = prompt("Ingrese el nombre del estudiante : ");
+            let nota = prompt("Ingrese la nota del estudiante : ");
+            estudiante.push({ nombre: nombre, nota: nota });
+          }
+      
+          for (var property in estudiante) {
+            if (estudiante[property].nota > nota_aprobatoria) {
+              aprobados++;
+            } else {
+              desaprobados++;
+            }
+          }
+          return (
+            "Estudiantes Aprobados : " +
+            aprobados +
+            " - Desaprobados : " +
+            desaprobados
+          );
+        }
       }
