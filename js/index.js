@@ -98,8 +98,8 @@ function Menuejercicio(noejercicio){
     break;
 
     case 14:
-      let cantalumnos1 = parseFloat(prompt ("Ingrese la cantidad de alumnos"));
-      alert (aprobados(cantalumnos1));
+      let nofocos = parseInt(prompt("Ingrese la cantidad de focos : "));
+      alert(calculacolores(nofocos));
     break;
 
     case 15:
@@ -304,6 +304,42 @@ function menor(a,b,c,d,e,f){
             aprobados +
             " - Desaprobados : " +
             desaprobados
+          );
+        }
+      }
+
+
+      function calculacolores(nofocos) {
+        let focos = [];
+        let verde = 0;
+        let blanco = 0;
+        let rojo = 0;
+        if (isNaN(nofocos)) {
+          return "Por favor ingrese valores numericos";
+        } else {
+          for (let index = 0; index < nofocos; index++) {
+            let color = prompt("Ingrese el color de los focos que está fabricando : ");
+            focos.push({color: color});
+          }
+      
+          for (var property in focos) {
+            if (focos[property].color === 'verde') {
+              verde++;
+            } 
+            if (focos[property].color === 'blanco') {
+              blanco++;
+            } 
+            if (focos[property].color === 'rojo') {
+              rojo++;
+            } 
+          }
+          return (
+            "Tiene focos color verde : " +
+            verde +
+            " - color blanco : " +
+            blanco +
+            " - color rojo : " +
+            rojo
           );
         }
       }
